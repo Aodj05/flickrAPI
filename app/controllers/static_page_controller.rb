@@ -10,7 +10,7 @@ class StaticPageController < ApplicationController
           @photos = flickr.photos.getRecent
         end
       rescue StandardError => e
-        flash[:alert] = "#{e.class}: #{e.message}. Please try again..."
+        flash[:alert] = "#{e.class}: #{e.message}. Please try again."
         redirect_to root_path
       end
     end
